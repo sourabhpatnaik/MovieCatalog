@@ -12,7 +12,7 @@
 
 /*  */
 @media screen and (max-width: 480px) {
-    .view {
+    body {
         width: 400px;
     }
 }
