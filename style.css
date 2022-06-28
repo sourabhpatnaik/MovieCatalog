@@ -7,6 +7,7 @@
 :root{
     --primary-color:#4c3260;
     --secondary-color:#E43480;
+    --font-color:#EAD4C0;
 }
 
 /*  */
@@ -15,28 +16,42 @@ body{
     font-family: 'Fira Mono', monospace;
     margin: 0;   
 }
-
+/* Nav Bar */
 header{
     padding: 1rem;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
+    justify-content: space-between;
     background-color: var(--secondary-color);
 }
 
+header h1{
+    color: var(--primary-color);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+    text-shadow: 1px 1px var(--font-color);
+    
+}
+
+/* Searchbar */
 .search{
     background-color: transparent;
     border: 2px solid var(--primary-color);
     padding: 0.5rem 1rem;
+    margin-top: 1rem;
     border-radius: 50px;
     font-size: 1rem;
-    color: white;
+    color: var(--font-color);
     font-family: inherit;
 }
 
+/*Searchbar option */
 .search:focus{
     outline: 0;
     background-color: var(--primary-color);
 }
+
+/* Searchbar placeholder */
 .search::placeholder{
 
     color: var(--primary-color);
@@ -48,10 +63,10 @@ main{
     flex-wrap: wrap;
 
 }
-
+/* Movie info card */
 .movie{
     width: 300px;
-    margin: 1rem;
+    margin: 1.5rem;
     border-radius: 3px;
     box-shadow: 0.2px 4px 5px rgba(0,0,0,0.1);
     background-color: var(--secondary-color);
@@ -65,7 +80,7 @@ main{
 }
 
 .movie-info {
-    color: white;
+    color: var(--font-color);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -84,7 +99,7 @@ main{
     border-radius: 3px;
     font-weight: bold;
 }
-
+/* rating color*/
 .movie-info span.green {
     color: lightgreen;
 }
@@ -95,19 +110,24 @@ main{
     color: red;
 }
 
+/* Movie detail panel */
 .overview {
     position: absolute;
     right: 0;
     left: 0;
     bottom: 0;
-    background-color: white;
+    background-color: var(--font-color);
     padding: 1rem;
     max-height: 100%;
     transform: translateY(101%);
     transition: transform 0.3s ease-in;
+    color: #F43AB0;
 
 }
-
+.overview h3 {
+    color: var(--primary-color);
+}
+/* Hover effect implementation */
 .movie:hover .overview{
     transform: translateY(0);
 }
